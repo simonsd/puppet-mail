@@ -446,6 +446,7 @@ alias_database = hash:/etc/aliases
 #
 #mailbox_command = /some/where/procmail
 #mailbox_command = /some/where/procmail -a "$EXTENSION"
+mailbox_command = <% if has_variable?("mailbox_command") %><%= mailbox_command %><% else %>/usr/bin/zarafa-dagent<% end %><%= mail_user %>
 
 # The mailbox_transport specifies the optional transport in master.cf
 # to use after processing aliases and .forward files. This parameter
