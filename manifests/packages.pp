@@ -6,4 +6,6 @@ class mail::packages {
 		'postfix':
 			ensure => present;
 	}
+
+	realize(Package["$mail::mta"])
 }

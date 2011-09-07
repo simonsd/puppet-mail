@@ -2,7 +2,7 @@ import 'packages.pp'
 import 'config.pp'
 
 class mail (
-	$dagent
+	$mta = 'postfix'
 ) {
 	include 'mail::packages'
 	include 'mail::config'
